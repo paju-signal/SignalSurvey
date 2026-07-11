@@ -38,3 +38,17 @@ function toggleSignal(id){
     });
 
 }
+const map = document.getElementById("map");
+
+map.addEventListener("click", function(e){
+
+    const rect = map.getBoundingClientRect();
+
+    const x = Math.round(e.clientX - rect.left);
+
+    const y = Math.round(e.clientY - rect.top);
+
+    document.getElementById("coordX").textContent = x;
+    document.getElementById("coordY").textContent = y;
+
+});
